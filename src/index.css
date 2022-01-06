@@ -1,0 +1,23 @@
+body{
+    background-color:rgba(20,20,22,0.877);
+}
+.img-container{
+    width:100%;
+    height:70%;
+    overflow: hidden;
+}
+
+.img-container img{
+    width:100%;
+    height:100%;
+    transition: all 0.3s;
+}
+
+.img-container img:hover{
+    transform: scale(1.2);
+}
+
+.container{
+    background-color:white;
+    color:rgba(20,20,22,0.877);
+}
