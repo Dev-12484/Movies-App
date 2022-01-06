@@ -22,6 +22,7 @@ const App = () => {
 
   return ( 
     <>
+      <h1 style={{"color" : "white"}}>MoviesGO</h1>
       <input type="text" value={movieName} onChange={handleMovieName}></input>
       <button onClick={getMovies} >Search</button><br></br><br></br>
       {
