@@ -22,7 +22,7 @@ const App = () => {
 
   return ( 
     <>
-      <label style={{"color" : "white" , "fontSize" : "15px"}}>MoviesGO</label>
+      <label style={{"color" : "white" , "fontSize" : "15px"}}><b>MoviesGO</b></label>
       <input type="text" value={movieName} onChange={handleMovieName}></input>
       <button onClick={getMovies} >Search</button><br></br><br></br>
       {
