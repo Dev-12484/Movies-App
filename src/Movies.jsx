@@ -7,8 +7,8 @@ const Movie = (props) => {
                 <div class='img-container'>
                   <img src={'https://image.tmdb.org/t/p/original/'+ props.value.poster_path} alt="No Image Avaialable" width="250px" height="240px"></img>
                 </div>
-                <h3>{props.value.title}</h3>
-                <h3>{props.value.vote_average}</h3>
+                <h5>{props.value.title}</h5>
+                <h5>{props.value.vote_average}</h5>
             </td>
         </>
      );
