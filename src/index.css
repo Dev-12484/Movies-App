@@ -22,3 +22,16 @@ body{
     color:rgba(20,20,22,0.877);
 }
 
+nav{
+    margin-left:630px;
+    display:none;
+}
+
+nav ul li button{
+    color:rgba(20,20,22,0.877);
+    width:40px;
+    height:40px;
+    font-size:20px;
+    background-color:white;
+}
+

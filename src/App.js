@@ -20,28 +20,24 @@ const App = () => {
       setMovies(response.data.results)
       console.log(movies)
     })
+    document.getElementById('nav').style.display="inline-block";
   }
 
   let getMoviesTwo = () => {
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=f191df19b1466cca5a86b534ed777132&language=en-US&query=${movieName}&page=2&include_adult=false`).then(function (response) {
       console.log(response)
-      setMoviesTwo(response.data.results)
-      console.log(moviesTwo)
+      setMovies(response.data.results)
+      console.log(movies)
     })
-    document.getElementById('first').style.display="none";
-    document.getElementById('third').style.display="none";
-    document.getElementById('second').style.display="inline";
   }
 
   let getMoviesThree = () => {
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=f191df19b1466cca5a86b534ed777132&language=en-US&query=${movieName}&page=3&include_adult=false`).then(function (response) {
       console.log(response)
-      setMoviesThree(response.data.results)
-      console.log(moviesThree)
+      setMovies(response.data.results)
+      console.log(movies)
     })
-    document.getElementById('first').style.display="none";
-    document.getElementById('second').style.display="none";
-    document.getElementById('third').style.display="inline";
+    
   }
 
   return (
@@ -71,25 +67,15 @@ const App = () => {
               }
               
             </tr>
-          </table><nav aria-label="Page navigation example">
+          </table><nav aria-label="Page navigation example" id="nav">
   <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item" ariaCurrent><a class="page-link" href="#">1</a></li>
+    <li class="page-item" ariaCurrent><button onClick={getMovies}>1</button></li>
     <li class="page-item"><button onClick={getMoviesTwo}>2</button></li>
     <li class="page-item"><button onClick={getMoviesThree}>3</button></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
   </ul>
 </nav></>)}
 
-          <table style={{ 'width': '1340px' , "display" : "none"}} id="second">
+          {/* <table style={{ 'width': '1340px' , "display" : "none"}} id="second">
             <tr>
               {
                 moviesTwo && <>{moviesTwo.map(function (value) {
@@ -113,7 +99,7 @@ const App = () => {
               }
               
             </tr>
-          </table>
+          </table> */}
          
           
     </>
